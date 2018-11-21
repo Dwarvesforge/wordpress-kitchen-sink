@@ -79,8 +79,18 @@ print Thorin::pre(WPS::user(1));
 print '<h1>User by email</h1>';
 print Thorin::pre(WPS::user('ob@buzzbrothers.ch'));
 
+// popular posts
+print '<h1>Popular posts</h1>';
+$posts = WPS::popular_posts();
+print Thorin::pre($posts);
 
-
+// current post
+print '<h1>Current post</h1>';
+$currentPost = WPS::post();
+print Thorin::pre([
+	'title' => $currentPost->title,
+	'visits' => $currentPost->meta('post_visits')
+]);
 
 
 ?>

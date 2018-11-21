@@ -35,6 +35,60 @@ WPS::remove_welcome_panel();
 WPS::jpg_quality(10);
 
 /**
+ * Require featured image
+ */
+WPS::make_featured_image_required();
+
+/**
+ * Count post visits
+ */
+WPS::count_post_visits();
+
+/**
+ * Disable admin bar
+ */
+// WPS::disable_admin_bar();
+
+/**
+ * Remove url field from comment form
+ */
+WPS::comment_remove_url_field();
+
+/**
+ * Set the count of search results
+ */
+WPS::search_results_per_page(1);
+
+/**
+ * Add mime types
+ */
+WPS::add_mime_types([
+	'svg' => 'image/svg+xml'
+]);
+
+/**
+ * Remove some mime types
+ */
+// WPS::remove_mime_types([
+// 	'jpg', 'png'
+// ]);
+
+/**
+ * Unregister default widgets
+ */
+// WPS::unregister_default_widgets();
+
+/**
+ * Google analytics
+ */
+// WPS::google_analytics('eefeef');
+
+/**
+ * Google tag manager
+ */
+// WPS::google_tag_manager('eefeef');
+
+/**
  * Twenty Seventeen only works in WordPress 4.7 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
@@ -75,7 +129,7 @@ function twentyseventeen_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	// add_theme_support( 'post-thumbnails' );
-	WPS::support_featured_image();
+	WPS::add_featured_image_support();
 
 	add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
 
