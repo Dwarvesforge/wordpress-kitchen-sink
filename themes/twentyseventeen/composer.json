@@ -1,0 +1,22 @@
+{
+    "name": "olivierbossel/twentyseventeen",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olivier Bossel",
+            "email": "olivier.bossel@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/dwarvesforge/wp-stack"
+        }
+    ],
+    "require": {
+        "dwarvesforge/wp-stack": "dev-master",
+        "dwarvesforge/thorin": "^1.1",
+        "paquettg/php-html-parser": "^1.7"
+    }
+}
