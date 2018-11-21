@@ -11,6 +11,80 @@
  */
 ?>
 
+<?php
+
+// archives
+print '<h1>Archives</h1>';
+print Thorin::pre(WPS::archives());
+
+// categories
+print '<h1>Categories</h1>';
+print Thorin::pre(WPS::categories());
+
+// recent comments
+print '<h1>Recent comments</h1>';
+print Thorin::pre(WPS::recent_comments());
+
+// menu
+print '<h1>Menu</h1>';
+print Thorin::pre(WPS::menu('primary'));
+
+// next post
+print '<h1>Next post</h1>';
+print Thorin::pre(WPS::next_post());
+
+// previous post
+print '<h1>Previous post</h1>';
+print Thorin::pre(WPS::previous_post());
+
+// next post link
+print '<h1>Next posts link</h1>';
+print Thorin::pre(WPS::next_posts_link());
+
+// previous post link
+print '<h1>Previous posts link</h1>';
+print Thorin::pre(WPS::previous_posts_link());
+
+// next posts url
+print '<h1>Next posts url</h1>';
+print Thorin::pre(WPS::next_posts_url());
+
+// previous posts url
+print '<h1>Previous posts url</h1>';
+print Thorin::pre(WPS::previous_posts_url());
+
+// post
+print '<h1>Post</h1>';
+print Thorin::pre(WPS::post());
+
+// posts
+print '<h1>Posts</h1>';
+print Thorin::pre(WPS::posts([
+	'posts_per_page' => 2
+]));
+
+// recent posts
+print '<h1>Recent posts</h1>';
+print Thorin::pre(WPS::recent_posts([
+	'numberposts' => 2
+]));
+
+// users count
+print '<h1>Users count</h1>';
+print Thorin::pre(WPS::users_count());
+
+// user
+print '<h1>User by id</h1>';
+print Thorin::pre(WPS::user(1));
+print '<h1>User by email</h1>';
+print Thorin::pre(WPS::user('ob@buzzbrothers.ch'));
+
+
+
+
+
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	if ( is_sticky() && is_home() ) :
@@ -50,6 +124,7 @@
 
 	<div class="entry-content">
 		<?php
+		the_excerpt();
 		/* translators: %s: Name of current post */
 		the_content( sprintf(
 			__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen' ),

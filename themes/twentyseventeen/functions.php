@@ -15,6 +15,26 @@
 require_once 'vendor/autoload.php';
 
 /**
+ * Remove wordpress version
+ */
+WPS::remove_version();
+
+/**
+ * New excerpt length
+ */
+WPS::excerpt_length(10);
+
+/**
+ * Remove welcome panel
+ */
+WPS::remove_welcome_panel();
+
+/**
+ * Jpg quality
+ */
+WPS::jpg_quality(10);
+
+/**
  * Twenty Seventeen only works in WordPress 4.7 or later.
  */
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
@@ -54,7 +74,8 @@ function twentyseventeen_setup() {
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	add_theme_support( 'post-thumbnails' );
+	// add_theme_support( 'post-thumbnails' );
+	WPS::support_featured_image();
 
 	add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
 
