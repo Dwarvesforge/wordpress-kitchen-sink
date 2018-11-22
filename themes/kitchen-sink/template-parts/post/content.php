@@ -89,8 +89,13 @@ print '<h1>Current post</h1>';
 $currentPost = WPS::post();
 print Thorin::pre([
 	'title' => $currentPost->title,
-	'visits' => $currentPost->meta('post_visits')
+	'viewed_count' => $currentPost->viewed_count
 ]);
+
+// current post comments
+print '<h1>Current post comments</h1>';
+$currentPostComments = WPS::comments();
+print Thorin::pre($currentPostComments);
 
 
 ?>

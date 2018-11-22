@@ -40,9 +40,9 @@ WPS::jpg_quality(10);
 WPS::make_featured_image_required();
 
 /**
- * Count post visits
+ * Count post views
  */
-WPS::count_post_visits();
+WPS::count_post_views();
 
 /**
  * Disable admin bar
