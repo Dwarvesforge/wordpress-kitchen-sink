@@ -69,6 +69,10 @@ print Thorin::pre(WPS::recent_posts([
 	'numberposts' => 2
 ]));
 
+// posts
+print '<h1>Random posts</h1>';
+print Thorin::pre(WPS::random_posts());
+
 // users count
 print '<h1>Users count</h1>';
 print Thorin::pre(WPS::users_count());
@@ -82,6 +86,16 @@ print Thorin::pre(WPS::user('ob@buzzbrothers.ch'));
 // popular posts
 print '<h1>Popular posts</h1>';
 $posts = WPS::popular_posts();
+print Thorin::pre($posts);
+
+// popular posts for category
+print '<h1>Popular posts for category</h1>';
+$posts = WPS::popular_posts_for_category(0);
+print Thorin::pre($posts);
+
+// related posts
+print '<h1>Related posts</h1>';
+$posts = WPS::related_posts(1, 2);
 print Thorin::pre($posts);
 
 // current post
