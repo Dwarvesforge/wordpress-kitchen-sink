@@ -13,6 +13,12 @@
 
 <?php
 
+if (is_single()) {
+	global $post;
+	$acfPost = new \WPS\ACF_Post($post);
+	print Thorin::pre($acfPost);
+}
+
 // archives
 print '<h1>Archives</h1>';
 print Thorin::pre(WPS::archives());

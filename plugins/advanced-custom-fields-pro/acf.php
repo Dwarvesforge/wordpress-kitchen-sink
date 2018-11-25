@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Advanced Custom Fields
+Plugin Name: Advanced Custom Fields PRO
 Plugin URI: https://www.advancedcustomfields.com/
 Description: Customise WordPress with powerful, professional and intuitive fields.
 Version: 5.7.7
@@ -244,11 +244,6 @@ class ACF {
 		// include wpml support
 		if( defined('ICL_SITEPRESS_VERSION') ) {
 			acf_include('includes/wpml.php');
-		}
-		
-		// early access
-		if( defined('ACF_EARLY_ACCESS') ) {
-			acf_include('includes/early-access.php');
 		}
 		
 		// include gutenberg

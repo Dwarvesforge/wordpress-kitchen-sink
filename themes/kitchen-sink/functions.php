@@ -17,22 +17,22 @@ require_once 'vendor/autoload.php';
 /**
  * Remove wordpress version
  */
-WPS::remove_version();
+// WPS::remove_version();
 
 /**
  * New excerpt length
  */
-WPS::excerpt_length(10);
+// WPS::excerpt_length(10);
 
 /**
  * Remove welcome panel
  */
-WPS::remove_welcome_panel();
+// WPS::remove_welcome_panel();
 
 /**
  * Jpg quality
  */
-WPS::jpg_quality(10);
+// WPS::jpg_quality(10);
 
 /**
  * Require featured image
@@ -52,7 +52,7 @@ WPS::count_post_views();
 /**
  * Remove url field from comment form
  */
-WPS::comment_remove_url_field();
+// WPS::comment_remove_url_field();
 
 /**
  * Set the count of search results
@@ -100,7 +100,27 @@ WPS::add_wysiwyg_stylesheet(array(
 /**
  * Add some classes to thr wysiwyg editor
  */
-WPS::add_wysiwyg_class('tf vr');
+// WPS::add_wysiwyg_class('tf vr');
+
+/**
+ * Reset dashboard
+ */
+// WPS::reset_dashboard();
+
+/**
+ * Remove guttenberg panel
+ */
+// WPS::remove_try_guttenberg_panel();
+
+/**
+ * Set custom local json path for ACF
+ */
+WPS::acf_set_local_json_path(get_stylesheet_directory() . '/acf');
+
+/**
+ * Enable the options page
+ */
+WPS::enable_options_page();
 
 /**
  * Twenty Seventeen only works in WordPress 4.7 or later.
