@@ -16,7 +16,11 @@
 if (is_single()) {
 	global $post;
 	$acfPost = new \WPS\ACF_Post($post);
-	print Thorin::pre($acfPost);
+	
+	while($acfPost->have_rows()) {
+		$acfPost->the_row();
+	}
+
 }
 
 // archives
